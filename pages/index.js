@@ -1,31 +1,10 @@
 import axios from "axios";
 import React from "react";
-export default function Home() {
-  let [news, setNews] = React.useState([]);
-  let [articles, setArticles] = React.useState([]);
+export default function Home(props) {
+  let news = props.posts.articles[0];
+  let articles = props.posts.articles[2];
 
-  React.useEffect(() => {
-    getNews();
-  }, []);
-
-  const getNews = async () => {
-    var config = {
-      method: "get",
-      url: "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=42bc83055280456785abf1623b6ef46b",
-      headers: {},
-    };
-
-    await axios(config)
-      .then(function (response) {
-        setNews(response.data.articles[0]);
-        setArticles(response.data.articles[2]);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
-
-  console.log(articles);
+  console.log(props.posts.articles[0]);
   return (
     <>
       <header className="header-text">
@@ -142,4 +121,15 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=42bc83055280456785abf1623b6ef46b");
+  const posts = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
 }
