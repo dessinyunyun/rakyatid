@@ -3,6 +3,7 @@ import React from "react";
 export default function Home(props) {
   let news = props.posts.articles[0];
   let articles = props.posts.articles[2];
+  let data = props.posts.articles;
 
   console.log(props.posts.articles[0]);
   return (
@@ -106,14 +107,115 @@ export default function Home(props) {
                 </div>
               </div>
             </div>
+            <div class="main-section row mt-3">
+              <div class="col-sm-8 border-red bg-netral-100 h-maxborder-red bg-netral-100 h-max p-0">
+                <div class="img-section max-w-full">
+                  <img src={data[3].urlToImage} alt="" className="max-w-full" />
+                </div>
+
+                <div class="text p-2">
+                  <h3 className="text-xl font-medium mt-1">
+                    {" "}
+                    <b className="text-red-50">{data[3].author} /</b> {data[3].title}
+                  </h3>{" "}
+                  <p className="h-max mt-5">{data[3].description}</p>
+                </div>
+              </div>
+              <div class="col-sm-4 flex flex-column gap-2">
+                <div class="wrapper border-red bg-netral-100 h-max ">
+                  <div class="img-section ">
+                    <img src={data[9].urlToImage} alt="" />
+                  </div>
+
+                  <div class="text p-1">
+                    <h3 className="text-xl font-medium">
+                      {" "}
+                      <b className="text-red-50">{data[9].author} /</b> {data[9].title}
+                    </h3>{" "}
+                  </div>
+                </div>
+                <div class="wrapper border-red bg-netral-100 h-max">
+                  <div class="text p-1">
+                    <h3 className="text-base font-medium">
+                      {" "}
+                      <b className="text-red-50">{data[4].author} /</b> {data[4].title}
+                    </h3>{" "}
+                  </div>
+                </div>
+                <div class="wrapper border-red bg-netral-100 h-max">
+                  <div class="text p-1">
+                    <h3 className="text-base font-medium">
+                      {" "}
+                      <b className="text-red-50">{data[5].author} /</b> {data[5].title}
+                    </h3>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 gap-2 flex flex-column">
             <div class="section-aside">
               <div class="image-aside h-max">
                 <img src={articles.urlToImage} alt="" />
               </div>
               <div class="title-aside">
                 <b className="text-red-50">{articles.author} /</b> {articles.title}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[6].author} /</b> {data[6].title}
+                </h3>{" "}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[7].author} /</b> {data[7].title}
+                </h3>{" "}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[8].author} /</b> {data[8].title}
+                </h3>{" "}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[8].author} /</b> {data[8].title}
+                </h3>{" "}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[8].author} /</b> {data[8].title}
+                </h3>{" "}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[8].author} /</b> {data[8].title}
+                </h3>{" "}
+              </div>
+            </div>
+            <div class="wrapper border-red bg-netral-100 h-max">
+              <div class="text p-1">
+                <h3 className="text-base font-medium">
+                  {" "}
+                  <b className="text-red-50">{data[8].author} /</b> {data[8].title}
+                </h3>{" "}
               </div>
             </div>
           </div>
